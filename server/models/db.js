@@ -9,8 +9,8 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   omitNull: true,
   dialectOptions: {
     ssl: {
-      require: CSSViewTransitionRule,
-      rejectUnauthorized: false,
+      require: true,
+      rejectUnauthorized: false, // ไม่แนะนำใน production
     },
   },
 });
